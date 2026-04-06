@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml type="demo">
+
+    <party.Party partyId="P100" partyTypeEnumId="PERSON" createdDate="2026-01-01 00:00:00.0"/>
+    <party.Person partyId="P100" firstName="Harsh" lastName="Mahajan" dateOfBirth="2002-01-01"/>
+
+    <party.Party partyId="G100" partyTypeEnumId="PARTY_GROUP" createdDate="2026-01-01 00:00:00.0"/>
+    <party.PartyGroup partyId="G100" groupName="Tech Corp" description="IT Company"/>
+
+    <party.ContactMech contactMechId="C100" contactMechTypeId="EMAIL" infoString="harsh@example.com" createdDate="2026-01-01 00:00:00.0"/>
+    <party.ContactMech contactMechId="C200" contactMechTypeId="TELECOM_NUMBER" infoString="9876543210" createdDate="2026-01-01 00:00:00.0"/>
+
+    <party.PartyContactMech partyId="P100" contactMechId="C100" fromDate="2026-01-01 00:00:00.0"/>
+    <party.PartyContactMech partyId="P100" contactMechId="C200" fromDate="2026-01-01 00:00:00.0"/>
+
+</entity-facade-xml>
