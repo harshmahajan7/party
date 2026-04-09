@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+          name="party"
+          require-authentication="anonymous-all">
+
+    <resource name="person">
+        <!-- List all persons -->
+        <method type="get">
+            <service name="party.PersonServices.get#Persons"/>
+        </method>
+
+        <!-- Create a person -->
+        <method type="post">
+            <service name="party.PersonServices.create#Person"/>
+        </method>
+
+        <!-- Individual person operations -->
+        <id name="partyId">
+            <method type="get">
+                <service name="party.PersonServices.get#Person"/>
+            </method>
+            <method type="patch">
+                <service name="party.PersonServices.update#Person"/>
+            </method>
+            <method type="delete">
+                <service name="party.PersonServices.delete#Person"/>
+            </method>
+        </id>
+    </resource>
+
+</resource>
