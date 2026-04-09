@@ -2,7 +2,6 @@
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
 
-    <!-- 🔥 Create Person Service -->
     <service verb="create" noun="Person" type="script"
              location="component://party/service/party/createPerson.groovy" authenticate="false">
         <in-parameters>
@@ -16,17 +15,14 @@
         </out-parameters>
     </service>
 
-    <!-- Update Person -->
     <service verb="update" noun="Person" type="entity-auto">
         <in-parameters><auto-parameters entity-name="Person" include="all"/></in-parameters>
     </service>
 
-    <!-- Delete Person -->
     <service verb="delete" noun="Person" type="entity-auto">
         <in-parameters><auto-parameters entity-name="Person" include="pk"/></in-parameters>
     </service>
 
-    <!-- Get Person -->
     <service verb="get" noun="Person">
         <in-parameters><parameter name="partyId" required="true"/></in-parameters>
         <out-parameters><auto-parameters entity-name="Person" include="all"/></out-parameters>
@@ -36,7 +32,6 @@
         </actions>
     </service>
 
-    <!-- Get Persons (List) -->
     <service verb="get" noun="Persons">
         <out-parameters><parameter name="personList" type="List"/></out-parameters>
         <actions>
