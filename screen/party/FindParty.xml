@@ -2,32 +2,25 @@
 <screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd">
 
-    <!-- ================= TRANSITION ================= -->
     <transition name="createParty">
-        <!-- Using default entity-auto service -->
         <service-call name="create#party.Party"/>
         <default-response url="."/>
     </transition>
 
-    <!-- ================= ACTIONS ================= -->
     <actions>
         <entity-find entity-name="party.Party" list="partyList">
             <search-form-inputs/>
         </entity-find>
     </actions>
 
-    <!-- ================= UI ================= -->
     <widgets>
 
-        <!-- 🔥 CREATE BUTTON + FORM -->
         <container-dialog id="CreatePartyDialog" button-text="Create Party">
 
             <form-single name="CreatePartyForm" transition="createParty">
 
-                <!-- Auto generate fields -->
                 <auto-fields-entity entity-name="party.Party" field-type="edit"/>
 
-                <!-- Submit button -->
                 <field name="submitButton">
                     <default-field title="Create">
                         <submit/>
@@ -38,7 +31,6 @@
 
         </container-dialog>
 
-        <!-- 🔥 LIST -->
         <form-list name="PartyList" list="partyList" header-dialog="true" skip-form="true">
 
             <auto-fields-entity entity-name="party.Party" field-type="find-display"/>
