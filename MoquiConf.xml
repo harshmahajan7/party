@@ -11,6 +11,17 @@
                              location="component://party/screen/party.xml"/>
 
         </screen>
+<<<<<<< HEAD
+=======
+        <screen location="component://webroot/screen/webroot/qapps.xml">
+
+            <subscreens-item name="party"
+                             menu-title="Party"
+                             menu-index="20"
+                             location="component://party/screen/party.xml"/>
+
+        </screen>
+>>>>>>> 64fa553 (Initial commit: Added party component)
     </screen-facade>
     <webapp name="webroot">
         <csrf-token enabled="false"/>

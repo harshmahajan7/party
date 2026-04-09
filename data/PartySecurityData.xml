@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml type="seed-initial">
+
+    <moqui.security.ArtifactGroup artifactGroupId="PARTY_APP"
+                                  description="Party Component App"/>
+
+    <moqui.security.ArtifactGroupMember artifactGroupId="PARTY_APP"
+                                        artifactName="component://party/screen/party.xml"
+                                        artifactTypeEnumId="AT_XML_SCREEN" inheritAuthz="Y"/>
+
+    <moqui.security.ArtifactAuthz artifactAuthzId="PARTY_ADMIN"
+                                  userGroupId="ADMIN" artifactGroupId="PARTY_APP"
+                                  authzTypeEnumId="AUTHZT_ALWAYS"
+                                  authzActionEnumId="AUTHZA_ALL"/>
+
+    <moqui.security.ArtifactAuthz artifactAuthzId="PARTY_ALL_USERS"
+                                  userGroupId="ALL_USERS" artifactGroupId="PARTY_APP"
+                                  authzTypeEnumId="AUTHZT_ALWAYS"
+                                  authzActionEnumId="AUTHZA_ALL"/>
+
+</entity-facade-xml>
