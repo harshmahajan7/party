@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entity-facade-xml type="demo">
+<entity-facade-xml type="seed">
 
     <party.Party partyId="P100" partyTypeEnumId="PERSON" createdDate="2026-01-01 00:00:00.0"/>
     <party.Person partyId="P100" firstName="Harsh" lastName="Mahajan" dateOfBirth="2002-01-01"/>
